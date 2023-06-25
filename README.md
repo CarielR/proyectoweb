@@ -1,3 +1,4 @@
 # proyectoweb
-PROYECTO DEL SUPER EQUIPO ALFA DINAMITA
-Hola este es mi aporte
+Analytika Women
+  Se añadio 3 carpetas con la finalidad de mantener 3 punbtos de recuperacion clave 
+  

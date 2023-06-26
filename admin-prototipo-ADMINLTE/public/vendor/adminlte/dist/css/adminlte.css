@@ -53,6 +53,63 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+.chart {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slice {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    transform-origin: left center;
+  }
+
+  .slice:nth-child(1) {
+    background-color: #ff6384;
+    transform: rotate(0deg);
+  }
+
+  .slice:nth-child(2) {
+    background-color: #36a2eb;
+    transform: rotate(60deg);
+  }
+
+  .slice:nth-child(3) {
+    background-color: #ffce56;
+    transform: rotate(120deg);
+  }
+
+  .slice:nth-child(4) {
+    background-color: #4bc0c0;
+    transform: rotate(180deg);
+  }
+
+  .slice:nth-child(5) {
+    background-color: #9966ff;
+    transform: rotate(240deg);
+  }
+
+  .slice:nth-child(6) {
+    background-color: #ff9f40;
+    transform: rotate(300deg);
+  }
+
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+  }
+
+
+
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;

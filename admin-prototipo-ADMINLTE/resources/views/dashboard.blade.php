@@ -103,7 +103,7 @@
 @section('adminlte_css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.css">
 @stop
-
+<!-- asdasd -->
 @section('adminlte_js')
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script>

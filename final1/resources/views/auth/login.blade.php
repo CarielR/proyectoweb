@@ -1,12 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<style>
+    .img{
+margin-left: 430px;
+  text-align: center;
+  width: 150px; /* Ajusta el valor según el tamaño deseado */
+  height: 100px;
+    }
+    .text{
+        text-align: center;
+        font-weight: bold; /* Aplica negrita */
+  color: black; /* Aplica color */
+    }
+</style>
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
+             <div><img src="{{ asset('img/AW.png') }}" alt="" class="img"></div><br>
+             <div class=" text">{{ __('INICIAR SESION') }}</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -69,5 +82,5 @@
             </div>
         </div>
     </div>
-</div>
+
 @endsection

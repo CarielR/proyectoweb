@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   position: fixed;
   z-index: 999;
-  background: #071744de;
+  background: #781169d2;
 }
 
 @media (max-width: 768px) {
@@ -138,9 +138,7 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-.nav-menu a:hover, .nav-menu li:hover > a, .nav-menu .menu-active > a {
-  color: #dd5eeeee;
-}
+
 
 /* Mobile Nav Toggle */
 #mobile-nav-toggle {

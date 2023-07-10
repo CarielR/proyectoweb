@@ -106,7 +106,7 @@
             </ul>
           </li>
           <li><a href="#contact">Contact Us</a></li> -->
-          <img src="img/AW.png" alt="" title="" class="logoAW"/></img>
+         
           
           <li><a href="#testimonials">Socias-Accionistas</a></li>
           <li><a href="#contact">Contactos</a></li>
@@ -128,7 +128,7 @@
   About Section
   ============================-->
   <section class="centralimg" id="Home">   
-    <img src="img/central.jpg" alt="">
+    <img src="img/central.png" alt="">
     <div class="text-containerC">
       <p class="typing-effect" style="color: aliceblue;">Transformamos datos en información para la toma de 
         desiciones.</p>
@@ -144,9 +144,9 @@
         <div class="col-md-12">
           <h3 class="section-title"><img src="img/quienessomos.png" alt="" width="50px" style="margin: 10px;"><span style="color: rgba(255, 9, 222, 0.863);">¿</span> Quiénes somos <span style="color: rgba(255, 9, 222, 0.863);">?</span></h3>
           <div class="section-title-divider"></div>
-          <p class="section-description">Somos una empresa conformada por un grupo multidisciplinario de mujeres profesionales de diferentes provincias del país, con una trayectoria importante de trabajo y experiencias en empresas públicas y privadas; tenemos un recorrido amplio de trabajo social 
+          <p class="section-description" style="font-size: 20px;">Somos una empresa conformada por un grupo multidisciplinario de mujeres profesionales de diferentes provincias del país, con una trayectoria importante de trabajo y experiencias en empresas públicas y privadas; tenemos un recorrido amplio de trabajo social 
             con grupo de atención prioritaria.</p>
-            <p class="section-description">Somos multifacéticas y creemos que la mujer está preparada para hacer que las cosas sucedan.</p>
+            <p class="section-description" style="font-size: 20px;">Somos multifacéticas y creemos que la mujer está preparada para hacer que las cosas sucedan.</p>
         </div>
       </div>
       <br><br><br><br><br><br>
@@ -161,7 +161,7 @@
       <img src="img/vision.png" alt="Imagen" class="visionmision">
       <div class="text-containerMV">
         <h1 class="h1VM">Visión</h1>
-        <p class="texMV">Ser una compañía ecuatoriana eferente en el ámbito de la investigación financiera, económica,
+        <p class="texMV" style="font-size: 20px;">Ser una compañía ecuatoriana eferente en el ámbito de la investigación financiera, económica,
           social y política, aportando al bienestar y desarrollo humano, cumpliendo estándares de calidad,
           buenas prácticas y aplicando metodologías innovadoras en la investigación y análisis de información.</p>
       </div>
@@ -169,7 +169,7 @@
       <img src="img/enfocar.png" alt="Imagen" class="visionmision">
       <div class="text-containerMV">
         <h1 class="h1VM">Misión</h1>
-        <p class="texMV">Transformar data en información mediante conceptos innovadores y ágiles,
+        <p class="texMV" style="font-size: 20px;">Transformar data en información mediante conceptos innovadores y ágiles,
         para que las organizaciones e instituciones públicas y privadas,cuenten con las mejores 
         soluciones en la toma de decisiones a nivel técnico, económico, político y social; considerando
         enfoques de tipo intergeneracional, intersectorial, intercultural, ambiental, de género y movilidad. </p>
@@ -209,7 +209,7 @@
       <div class="row">
         <div class="col-md-8">
           <h3 class="subscribe-title">Nuestro modelo de negocios</h3>
-          <p class="subscribe-text">El modelo de negocio de Analytika Women está orientado a generar información para la toma de
+          <p class="subscribe-text" style="font-size: 20px;">El modelo de negocio de Analytika Women está orientado a generar información para la toma de
             decisiones en:  Instituciones Públicas, Privadas y ONGs.
             </p>
         </div>        
@@ -229,17 +229,16 @@
           <div class="col-md-12">
             <h3 class="section-title">Cultura Organizacional</h3>
             <div class="section-title-divider"></div>
-            <div class="imcl">
-            <img src="img/stud.jpg" alt="" class="resized-image"> 
-          </div>
-            <p style="font-size: 20px; color: rgb(0, 0, 0);">Nuestra empresa promueve la cultura de
+            <div class="imcl">           
+            <p style="font-size: 30px; color: rgb(0, 0, 0);">Nuestra empresa promueve la cultura de
               la integridad personal, para proponer
               las mejores alternativas frente a las
               necesidades o requerimientos
               solicitados; para lo cual nos apoyamos
               de un equipo multidisciplinario de
               profesionales con equidad de género.</p>
-              <br>
+          </div>          
+          <img src="img/stud.jpg" alt="" class="resized-image"> 
           </div>
         </div>      
             
@@ -354,9 +353,9 @@
         <div class="col-md-12">
           <h3 class="section-title">Contactos</h3>
           <div class="section-title-divider"></div>
-          <p class="section-description">"Individualmente somos una gota,
+          <p class="section-description" style="font-size: 20px;">"Individualmente somos una gota,
             juntos formamos un océano"
-            <br>Ryunosuke Satoro </p>
+            <br style="font-size: 15px;">Ryunosuke Satoro </p>
         </div>
       </div>
 
@@ -365,12 +364,12 @@
         <div class="team">
           <div class="member">
             <div class="left-content">
-              <h4>Teléfonos</h4>
-              <span>0999785416</span>
-              <span>0990902380</span>
+              <h4 style="font-size: 20px;">Teléfonos</h4>
+              <span style="font-size: 20px;">0999785416</span>
+              <span style="font-size: 20px;">0990902380</span>
               <br><br>
-              <h4>Email</h4>
-              <span>analytikawomen@gmail.com</span>
+              <h4 style="font-size: 20px;">Email</h4>
+              <span style="font-size: 20px;">analytikawomen@gmail.com</span>
             </div>
             <div class="right-content">
               <img src="img/contact.png" alt="Imagen de ejemplo">

@@ -7,16 +7,16 @@
 					<div style="display: flex; justify-content: space-between; align-items: center;">
 						<div class="float-left">
 							<h4><i class="fab fa-laravel text-info"></i>
-							Cliente Listing </h4>
+							Consulta de Clientes</h4>
 						</div>
 						@if (session()->has('message'))
 						<div wire:poll.4s class="btn btn-sm btn-success" style="margin-top:0px; margin-bottom:0px;"> {{ session('message') }} </div>
 						@endif
 						<div>
-							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Search Clientes">
+							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Buscar Cliente">
 						</div>
 						<div class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#createDataModal">
-						<i class="fa fa-plus"></i>  Add Clientes
+						<i class="fa fa-plus"></i>  Añadir Cliente
 						</div>
 					</div>
 				</div>
@@ -28,16 +28,16 @@
 						<thead class="thead">
 							<tr> 
 								<td>#</td> 
-								<th>Genero Id</th>
-								<th>Nombre Cli</th>
-								<th>Fecha Nac Cli</th>
-								<th>Telefono1 Cli</th>
-								<th>Telefono2 Cli</th>
-								<th>Email Cli</th>
-								<th>Titulo Cli</th>
-								<th>Rol Cli</th>
-								<th>Experiencia Cli</th>
-								<td>ACTIONS</td>
+								<th>Genero</th>
+								<th>Nombre</th>
+								<th>Fecha Nacimiento</th>
+								<th>Telefono 1</th>
+								<th>Telefono 2</th>
+								<th>Email</th>
+								<th>Titulo</th>
+								<th>Rol</th>
+								<th>Experiencia</th>
+								<td>Acciones</td>
 							</tr>
 						</thead>
 						<tbody>

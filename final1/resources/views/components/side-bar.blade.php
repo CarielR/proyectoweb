@@ -1,3 +1,19 @@
+<html>
+<link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.css%22%3E">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <style>
+    .siderbar:hover {
+        background-color: red;
+    }
+    .log{
+        float: left;
+        width: 100px; /* Ajusta el valor según el tamaño deseado */
+        height: auto;
+        margin-right: 20px;
+    }
+</style>
+<body>
 <nav class="navbar navbar-expand-md navbar-light bg-white ">
             <div class="container">
                
@@ -48,6 +64,7 @@
                 </div>
             </div>
         </nav>
+
 <div class="wrapper">
 
  
@@ -80,3 +97,6 @@
     </div>
     <!-- /.sidebar -->
   </aside> 
+  </body>
+  </html>
+  

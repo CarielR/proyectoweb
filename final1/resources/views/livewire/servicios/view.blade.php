@@ -18,17 +18,17 @@
 						<div class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#createDataModal">
 						<i class="fa fa-plus"></i>  Add Servicios
 						</div>
-						<div><a href="{{ route('generar-pdfcursos') }}" class="btn btn-sm btn-info">PDF</a></div>
+						<div><a href="{{ route('generar-pdfcursos') }}" class="btn btn-sm btn-info">Ver Reporte</a></div>
 					</div>
 				</div>
-				
+
 				<div class="card-body">
 						@include('livewire.servicios.modals')
 				<div class="table-responsive">
 					<table class="table table-bordered table-sm">
 						<thead class="thead">
-							<tr> 
-								<td>#</td> 
+							<tr>
+								<td>#</td>
 								<th>Cliente Id</th>
 								<th>Nombre Serv</th>
 								<th>Descripcion Serv</th>
@@ -39,7 +39,7 @@
 						<tbody>
 							@forelse($servicios as $row)
 							<tr>
-								<td>{{ $loop->iteration }}</td> 
+								<td>{{ $loop->iteration }}</td>
 								<td>{{ $row->cliente_id }}</td>
 								<td>{{ $row->nombre_serv }}</td>
 								<td>{{ $row->descripcion_serv }}</td>
@@ -51,9 +51,9 @@
 										</a>
 										<ul class="dropdown-menu">
 											<li><a data-bs-toggle="modal" data-bs-target="#updateDataModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Edit </a></li>
-											<li><a class="dropdown-item" onclick="confirm('Confirm Delete Servicio id {{$row->id}}? \nDeleted Servicios cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a></li>  
+											<li><a class="dropdown-item" onclick="confirm('Confirm Delete Servicio id {{$row->id}}? \nDeleted Servicios cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a></li>
 										</ul>
-									</div>								
+									</div>
 								</td>
 							</tr>
 							@empty
@@ -62,7 +62,7 @@
 							</tr>
 							@endforelse
 						</tbody>
-					</table>						
+					</table>
 					<div class="float-end">{{ $servicios->links() }}</div>
 					</div>
 				</div>

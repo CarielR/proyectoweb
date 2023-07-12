@@ -16,8 +16,16 @@
 							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Buscar Cliente">
 						</div>
 						<div class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#createDataModal">
+<<<<<<< Updated upstream
 						<i class="fa fa-plus"></i>  Añadir Cliente
 						</div>
+======
+						<i class="fa fa-plus"></i>  Añadir Cliente
+</div>
+						<div><a href="{{ route('generar-pdf') }}" class="btn btn-sm btn-info">PDF</a></div>
+						
+						
+>>>>>>> Stashed changes
 					</div>
 				</div>
 				
@@ -61,6 +69,11 @@
 										<ul class="dropdown-menu">
 											<li><a data-bs-toggle="modal" data-bs-target="#updateDataModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Edit </a></li>
 											<li><a class="dropdown-item" onclick="confirm('Confirm Delete Cliente id {{$row->id}}? \nDeleted Clientes cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a></li>  
+											<li>
+											<a href="#" class="dropdown-item" wire:click="redirectToPDF()">
+        <i class="fa fa-file-pdf"></i> PDF
+    </a>
+												</li>
 										</ul>
 									</div>								
 								</td>

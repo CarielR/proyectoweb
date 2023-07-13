@@ -49,3 +49,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 		$pdf = PDF::loadView('livewire.eventos-pdf');
 		return $pdf->stream('eventos.pdf');
 	})->name('generar-pdfevento');
+	Route::get('/generar-pdfempleo', function () {
+		$pdf = PDF::loadView('livewire.empleos-pdf');
+		return $pdf->stream('empleos.pdf');
+	})->name('generar-pdfempleo');
+	

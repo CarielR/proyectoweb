@@ -18,6 +18,7 @@
 						<div class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#createDataModal">
 						<i class="fa fa-plus"></i>  Add Generos
 						</div>
+						<div><a href="{{ route('generar-pdfgeneros') }}" class="btn btn-sm btn-info">PDF</a></div>
 					</div>
 				</div>
 				

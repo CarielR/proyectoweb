@@ -18,7 +18,7 @@
 						<div class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#createDataModal">
 						<i class="fa fa-plus"></i>  Add Servicios
 						</div>
-						<div><a href="{{ route('generar-pdfcursos') }}" class="btn btn-sm btn-info">PDF</a></div>
+						<div><a href="{{ route('generar-pdfservicio') }}" class="btn btn-sm btn-info">PDF</a></div>
 					</div>
 				</div>
 				

@@ -69,6 +69,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-lg-6">
                     <div class="box">
                         <div class="box-header with-border">

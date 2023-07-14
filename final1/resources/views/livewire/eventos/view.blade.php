@@ -13,10 +13,10 @@
 						<div wire:poll.4s class="btn btn-sm btn-success" style="margin-top:0px; margin-bottom:0px;"> {{ session('message') }} </div>
 						@endif
 						<div>
-							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Search Eventos">
+							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Buscar Eventos">
 						</div>
 						<div class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#createDataModal">
-						<i class="fa fa-plus"></i>  Add Eventos
+						<i class="fa fa-plus"></i>  Añadir Eventos
 						</div>
 						<div><a href="{{ route('generar-pdfevento') }}" class="btn btn-sm btn-info">Ver Reporte</a></div>
 					</div>
@@ -27,15 +27,15 @@
 				<div class="table-responsive">
 					<table class="table table-bordered table-sm">
 						<thead class="thead">
-							<tr>
-								<td>#</td>
-								<th>Nombre Event</th>
-								<th>Descripcion Event</th>
-								<th>Fecha Event</th>
-								<th>Horas Event</th>
-								<th>Ubicacion Event</th>
-								<th>Observacion Event</th>
-								<td>ACTIONS</td>
+							<tr> 
+								<td>#</td> 
+								<th>Nombre</th>
+								<th>Descripcion</th>
+								<th>Fecha</th>
+								<th>Horas</th>
+								<th>Ubicacion </th>
+								<th>Observacion </th>
+								<td>Acciones</td>
 							</tr>
 						</thead>
 						<tbody>

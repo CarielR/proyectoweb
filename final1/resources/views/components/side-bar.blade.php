@@ -23,7 +23,9 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-					<img src="{{ asset('img/AW.png') }}" alt="" class="log">					
+                  <a href="{{ url('/home#') }}">
+					          <img src="{{ asset('img/AW.png') }}" alt="" class="log" >		
+                 </a>			
 					@auth()
                     <ul class="navbar-nav mr-auto">
 					<a>ANALYTIKA WOMEN</a>
@@ -82,7 +84,7 @@
           <li class="nav-item menu-open">            
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ url('/cursoscaps') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Cursoscaps</a> 
+                <a href="{{ url('/cursoscaps') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Cursos</a> 
                 <a href="{{ url('/servicios') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Servicios</a>  
                 <a href="{{ url('/empleos') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Empleos</a>       
                 <a href="{{ url('/eventos') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Eventos</a>     
@@ -97,6 +99,15 @@
     </div>
     <!-- /.sidebar -->
   </aside> 
+  @livewireScripts
+    <script type="module">
+        const addModal = new bootstrap.Modal('#createDataModal');
+        const editModal = new bootstrap.Modal('#updateDataModal');
+        window.addEventListener('closeModal', () => {
+           addModal.hide();
+           editModal.hide();
+        })
+    </script> 
   </body>
   </html>
   

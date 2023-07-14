@@ -56,18 +56,22 @@
 								<td width="90">
 									<div class="dropdown">
 										<a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-											Actions
+											Acciones
 										</a>
 										<ul class="dropdown-menu">
-											<li><a data-bs-toggle="modal" data-bs-target="#updateDataModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Edit </a></li>
-											<li><a class="dropdown-item" onclick="confirm('Confirm Delete Cliente id {{$row->id}}? \nDeleted Clientes cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a></li>  
+											<li><a data-bs-toggle="modal" data-bs-target="#updateDataModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Editar </a></li>
+											<li><a class="dropdown-item" onclick="confirm('Cliente Eliminado id {{$row->id}}? \nNo se puede recuperar la lista de los clientes!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Eliminar </a></li>
+											<li>
+                                                <a href="#" class="dropdown-item" wire:click="redirectToPDF()" taget="blank">
+                                                <i class="fa fa-file-pdf"></i>Ver Reporte</a>
+											</li>
 										</ul>
 									</div>								
 								</td>
 							</tr>
 							@empty
 							<tr>
-								<td class="text-center" colspan="100%">No data Found </td>
+								<td class="text-center" colspan="100%">Clientes no Registrados </td>
 							</tr>
 							@endforelse
 						</tbody>

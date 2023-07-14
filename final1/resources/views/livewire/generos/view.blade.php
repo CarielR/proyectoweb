@@ -18,16 +18,17 @@
 						<div class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#createDataModal">
 						<i class="fa fa-plus"></i>  Add Generos
 						</div>
+						<div><a href="{{ route('generar-pdfgeneros') }}" class="btn btn-sm btn-info">Ver Reporte</a></div>
 					</div>
 				</div>
-				
+
 				<div class="card-body">
 						@include('livewire.generos.modals')
 				<div class="table-responsive">
 					<table class="table table-bordered table-sm">
 						<thead class="thead">
-							<tr> 
-								<td>#</td> 
+							<tr>
+								<td>#</td>
 								<th>Nombre Gen</th>
 								<td>ACTIONS</td>
 							</tr>
@@ -35,7 +36,7 @@
 						<tbody>
 							@forelse($generos as $row)
 							<tr>
-								<td>{{ $loop->iteration }}</td> 
+								<td>{{ $loop->iteration }}</td>
 								<td>{{ $row->Nombre_gen }}</td>
 								<td width="90">
 									<div class="dropdown">
@@ -44,9 +45,9 @@
 										</a>
 										<ul class="dropdown-menu">
 											<li><a data-bs-toggle="modal" data-bs-target="#updateDataModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Edit </a></li>
-											<li><a class="dropdown-item" onclick="confirm('Confirm Delete Genero id {{$row->id}}? \nDeleted Generos cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a></li>  
+											<li><a class="dropdown-item" onclick="confirm('Confirm Delete Genero id {{$row->id}}? \nDeleted Generos cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a></li>
 										</ul>
-									</div>								
+									</div>
 								</td>
 							</tr>
 							@empty
@@ -55,7 +56,7 @@
 							</tr>
 							@endforelse
 						</tbody>
-					</table>						
+					</table>
 					<div class="float-end">{{ $generos->links() }}</div>
 					</div>
 				</div>

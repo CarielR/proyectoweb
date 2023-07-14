@@ -16,18 +16,20 @@
 							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Buscar Cliente">
 						</div>
 						<div class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#createDataModal">
+
 						<i class="fa fa-plus"></i>  Añadir Cliente
 						</div>
+						<div><a href="{{ route('generar-pdf') }}" class="btn btn-sm btn-info">Ver Reporte</a></div>
 					</div>
 				</div>
-				
+
 				<div class="card-body">
 						@include('livewire.clientes.modals')
 				<div class="table-responsive">
 					<table class="table table-bordered table-sm">
 						<thead class="thead">
-							<tr> 
-								<td>#</td> 
+							<tr>
+								<td>#</td>
 								<th>Genero</th>
 								<th>Nombre</th>
 								<th>Fecha Nacimiento</th>
@@ -43,7 +45,7 @@
 						<tbody>
 							@forelse($clientes as $row)
 							<tr>
-								<td>{{ $loop->iteration }}</td> 
+								<td>{{ $loop->iteration }}</td>
 								<td>{{ $row->genero_id }}</td>
 								<td>{{ $row->nombre_cli }}</td>
 								<td>{{ $row->fecha_nac_cli }}</td>
@@ -60,9 +62,13 @@
 										</a>
 										<ul class="dropdown-menu">
 											<li><a data-bs-toggle="modal" data-bs-target="#updateDataModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Edit </a></li>
-											<li><a class="dropdown-item" onclick="confirm('Confirm Delete Cliente id {{$row->id}}? \nDeleted Clientes cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a></li>  
+											<li><a class="dropdown-item" onclick="confirm('Confirm Delete Cliente id {{$row->id}}? \nDeleted Clientes cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a></li>
+											<li>
+                                                <a href="#" class="dropdown-item" wire:click="redirectToPDF()">
+                                                <i class="fa fa-file-pdf"></i> PDF</a>
+											</li>
 										</ul>
-									</div>								
+									</div>
 								</td>
 							</tr>
 							@empty
@@ -71,7 +77,7 @@
 							</tr>
 							@endforelse
 						</tbody>
-					</table>						
+					</table>
 					<div class="float-end">{{ $clientes->links() }}</div>
 					</div>
 				</div>

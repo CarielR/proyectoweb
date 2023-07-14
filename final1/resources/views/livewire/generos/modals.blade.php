@@ -8,6 +8,7 @@
             </div>
            <div class="modal-body">
 				<form>
+                    <input type="hidden" wire:model="selected_id">
                     <div class="form-group">
                         <label for="Nombre_gen">Nombre del Género</label>
                         <input wire:model="Nombre_gen" type="text" class="form-control" id="Nombre_gen">@error('Nombre_gen') <span class="error text-danger">{{ $message }}</span> @enderror

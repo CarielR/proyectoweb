@@ -16,14 +16,14 @@
 <body>
 <nav class="navbar navbar-expand-md navbar-light bg-white ">
             <div class="container">
-               
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-					<img href="" src="{{ asset('img/AW.png') }}" alt="" class="log">					
+					<img href="" src="{{ asset('img/AW.png') }}" alt="" class="log">
 					@auth()
                     <ul class="navbar-nav mr-auto">
 					<a>ANALYTIKA WOMEN</a>
@@ -35,11 +35,11 @@
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                
+
                             @endif
 
                             @if (Route::has('register'))
-                               
+
                             @endif
                         @else
                             <li class="nav-item dropdown">
@@ -67,36 +67,44 @@
 
 <div class="wrapper">
 
- 
+
   <!-- Main Sidebar Container -->
   <aside  class="main-sidebar " style=" background-color: #DEBED3; ">
-    
+
     <!-- Sidebar -->
     <div class="sidebar">
-      <br>    
+      <br>
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">            
+          <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
               <li class="nav-item">
-              <a href="{{ url('/cursoscaps') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Cursoscaps</a> 
-                <a href="{{ url('/servicios') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Servicios</a>  
-                <a href="{{ url('/empleos') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Empleos</a>       
-                <a href="{{ url('/eventos') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Eventos</a>     
-                <a href="{{ url('/clientes') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Clientes</a>   
-                <a href="{{ url('/generos') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Generos</a> 
-              </li> 
+              <a href="{{ url('/cursoscaps') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Cursoscaps</a>
+                <a href="{{ url('/servicios') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Servicios</a>
+                <a href="{{ url('/empleos') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Empleos</a>
+                <a href="{{ url('/eventos') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Eventos</a>
+                <a href="{{ url('/clientes') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Clientes</a>
+                <a href="{{ url('/generos') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Generos</a>
+              </li>
             </ul>
-          </li>          
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-  </aside> 
+  </aside>
+  @livewireScripts
+    <script type="module">
+        const addModal = new bootstrap.Modal('#createDataModal');
+        const editModal = new bootstrap.Modal('#updateDataModal');
+        window.addEventListener('closeModal', () => {
+           addModal.hide();
+           editModal.hide();
+        })
+    </script>
   </body>
   </html>
-  

@@ -23,7 +23,9 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
+                    <a href="{{ route('home') }}">
 					<img href="" src="{{ asset('img/AW.png') }}" alt="" class="log">
+          </a>
 					@auth()
                     <ul class="navbar-nav mr-auto">
 					<a>ANALYTIKA WOMEN</a>

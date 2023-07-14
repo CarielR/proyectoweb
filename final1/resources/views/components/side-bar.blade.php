@@ -16,16 +16,14 @@
 <body>
 <nav class="navbar navbar-expand-md navbar-light bg-white ">
             <div class="container">
-               
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                  <a href="{{ url('/home#') }}">
-					          <img src="{{ asset('img/AW.png') }}" alt="" class="log" >		
-                 </a>			
+					<img href="" src="{{ asset('img/AW.png') }}" alt="" class="log">
 					@auth()
                     <ul class="navbar-nav mr-auto">
 					<a>ANALYTIKA WOMEN</a>
@@ -37,11 +35,11 @@
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                
+
                             @endif
 
                             @if (Route::has('register'))
-                               
+
                             @endif
                         @else
                             <li class="nav-item dropdown">
@@ -69,19 +67,19 @@
 
 <div class="wrapper">
 
- 
+
   <!-- Main Sidebar Container -->
   <aside  class="main-sidebar " style=" background-color: #DEBED3; ">
-    
+
     <!-- Sidebar -->
     <div class="sidebar">
-      <br>    
+      <br>
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">            
+          <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ url('/cursoscaps') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Cursos</a> 
@@ -92,7 +90,7 @@
                 <a href="{{ url('/generos') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Generos</a> 
               </li> 
             </ul>
-          </li>          
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -110,4 +108,3 @@
     </script> 
   </body>
   </html>
-  

@@ -21,7 +21,7 @@
 						<div><a href="{{ route('generar-pdfcursos') }}" class="btn btn-sm btn-info" target="blank">Ver Reporte</a></div>
 					</div>
 				</div>
-				
+
 				<div class="card-body">
 						@include('livewire.cursoscaps.modals')
 				<div class="table-responsive">
@@ -44,7 +44,7 @@
 						<tbody>
 							@forelse($cursoscaps as $row)
 							<tr>
-								<td>{{ $loop->iteration }}</td> 
+								<td>{{ $loop->iteration }}</td>
 								<td>{{ $row->cliente_id }}</td>
 								<td>{{ $row->nombre_cursoscaps }}</td>
 								<td>{{ $row->descipcion_cursoscaps }}</td>
@@ -61,9 +61,9 @@
 										</a>
 										<ul class="dropdown-menu">
 											<li><a data-bs-toggle="modal" data-bs-target="#updateDataModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Edit </a></li>
-											<li><a class="dropdown-item" onclick="confirm('Confirm Delete Cursoscap id {{$row->id}}? \nDeleted Cursoscaps cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a></li>  
+											<li><a class="dropdown-item" onclick="confirm('Confirm Delete Cursoscap id {{$row->id}}? \nDeleted Cursoscaps cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a></li>
 										</ul>
-									</div>								
+									</div>
 								</td>
 							</tr>
 							@empty
@@ -72,7 +72,7 @@
 							</tr>
 							@endforelse
 						</tbody>
-					</table>						
+					</table>
 					<div class="float-end">{{ $cursoscaps->links() }}</div>
 					</div>
 				</div>

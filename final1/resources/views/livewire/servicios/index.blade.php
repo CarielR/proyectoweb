@@ -1,13 +1,3 @@
-<<<<<<< Updated upstream
-@extends('layouts.app')
-@section('content')
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            @livewire('servicios')
-        </div>     
-    </div>   
-=======
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -64,6 +54,12 @@
   </div>
   <!-- /.content-wrapper -->
 
->>>>>>> Stashed changes
 </div>
-@endsection
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+
+</body>
+</html>
+<x-footer />

@@ -55,4 +55,11 @@
   <!-- /.content-wrapper -->
 
 </div>
-@endsection
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+
+</body>
+</html>
+<x-footer />

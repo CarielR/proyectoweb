@@ -65,7 +65,6 @@
             </div>
             <div class="modal-body">
                 <form>
-                <input type="hidden" wire:model="selected_id">
                 <div class="form-group">
                         <label for="genero_id">Genero</label>
                         <input wire:model="genero_id" type="text" class="form-control" id="genero_id" placeholder="Genero Id">@error('genero_id') <span class="error text-danger">{{ $message }}</span> @enderror

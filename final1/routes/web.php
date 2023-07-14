@@ -33,6 +33,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 		$pdf = PDF::loadView('livewire.cursos-cap');
 		return $pdf->stream('cursos.pdf');
 	})->name('generar-pdfcursos');
+	Route::get('/generar-pdfgeneros', function () {
+		$pdf = PDF::loadView('livewire.generos-pdf');
+		return $pdf->stream('generos.pdf');
+	})->name('generar-pdfgeneros');
 	Route::view('/generar-servicio', 'livewire.servicio-pdf')->middleware('auth');
 	Route::view('eventos', 'livewire.eventos.index')->middleware('auth');
 	Route::view('clientes', 'livewire.clientes.index')->middleware('auth');
@@ -41,3 +45,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 		$pdf = PDF::loadView('livewire.cand');
 		return $pdf->stream('clientes.pdf');
 	})->name('generar-pdf');
+	Route::get('/generar-pdfevento', function () {
+		$pdf = PDF::loadView('livewire.eventos-pdf');
+		return $pdf->stream('eventos.pdf');
+	})->name('generar-pdfevento');
+	Route::get('/generar-pdfempleo', function () {
+		$pdf = PDF::loadView('livewire.empleos-pdf');
+		return $pdf->stream('empleos.pdf');
+	})->name('generar-pdfempleo');
+	

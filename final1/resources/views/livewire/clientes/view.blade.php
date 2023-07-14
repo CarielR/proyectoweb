@@ -16,11 +16,10 @@
 							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Buscar Cliente">
 						</div>
 						<div class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#createDataModal">
+
 						<i class="fa fa-plus"></i>  Añadir Cliente
 						</div>
 						<div><a href="{{ route('generar-pdf') }}" class="btn btn-sm btn-info">Ver Reporte</a></div>
-
-
 					</div>
 				</div>
 

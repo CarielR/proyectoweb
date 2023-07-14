@@ -23,7 +23,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-					<img src="{{ asset('img/AW.png') }}" alt="" class="log">					
+					<img href="" src="{{ asset('img/AW.png') }}" alt="" class="log">					
 					@auth()
                     <ul class="navbar-nav mr-auto">
 					<a>ANALYTIKA WOMEN</a>
@@ -82,12 +82,12 @@
           <li class="nav-item menu-open">            
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ url('/cursoscaps') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Cursoscaps</a> 
-                <a href="{{ url('/servicios') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Servicios</a>  
-                <a href="{{ url('/empleos') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Empleos</a>       
-                <a href="{{ url('/eventos') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Eventos</a>     
-                <a href="{{ url('/clientes') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Clientes</a>   
-                <a href="{{ url('/generos') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Generos</a> 
+              <a href="{{ url('/cursoscaps') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Cursoscaps</a> 
+                <a href="{{ url('/servicios') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Servicios</a>  
+                <a href="{{ url('/empleos') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Empleos</a>       
+                <a href="{{ url('/eventos') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Eventos</a>     
+                <a href="{{ url('/clientes') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Clientes</a>   
+                <a href="{{ url('/generos') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Generos</a> 
               </li> 
             </ul>
           </li>          

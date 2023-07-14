@@ -1,0 +1,282 @@
+@keyframes move {
+  100% {
+      transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #311031;
+  overflow: hidden;
+}
+
+.background span {
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 20vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation: move;
+  animation-duration: 45;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+  color: #583C87;
+  top: 73%;
+  left: 62%;
+  animation-duration: 15s;
+  animation-delay: -26s;
+  transform-origin: -23vw 7vh;
+  box-shadow: 40vmin 0 5.276369668751384vmin currentColor;
+}
+.background span:nth-child(1) {
+  color: #583C87;
+  top: 96%;
+  left: 85%;
+  animation-duration: 23s;
+  animation-delay: -38s;
+  transform-origin: 9vw -2vh;
+  box-shadow: -40vmin 0 5.798198113324959vmin currentColor;
+}
+.background span:nth-child(2) {
+  color: #583C87;
+  top: 55%;
+  left: 45%;
+  animation-duration: 15s;
+  animation-delay: -42s;
+  transform-origin: 17vw 23vh;
+  box-shadow: 40vmin 0 5.764718756184875vmin currentColor;
+}
+.background span:nth-child(3) {
+  color: #E45A84;
+  top: 96%;
+  left: 91%;
+  animation-duration: 20s;
+  animation-delay: -2s;
+  transform-origin: -19vw 25vh;
+  box-shadow: 40vmin 0 5.766189115651497vmin currentColor;
+}
+.background span:nth-child(4) {
+  color: #583C87;
+  top: 81%;
+  left: 65%;
+  animation-duration: 39s;
+  animation-delay: -14s;
+  transform-origin: -23vw -8vh;
+  box-shadow: 40vmin 0 5.034265440324314vmin currentColor;
+}
+.background span:nth-child(5) {
+  color: #E45A84;
+  top: 72%;
+  left: 12%;
+  animation-duration: 53s;
+  animation-delay: -24s;
+  transform-origin: 24vw 21vh;
+  box-shadow: 40vmin 0 5.284988657338579vmin currentColor;
+}
+.background span:nth-child(6) {
+  color: #FFACAC;
+  top: 70%;
+  left: 64%;
+  animation-duration: 41s;
+  animation-delay: -46s;
+  transform-origin: -7vw -16vh;
+  box-shadow: -40vmin 0 5.059919176392538vmin currentColor;
+}
+.background span:nth-child(7) {
+  color: #E45A84;
+  top: 25%;
+  left: 26%;
+  animation-duration: 49s;
+  animation-delay: -20s;
+  transform-origin: -8vw 0vh;
+  box-shadow: -40vmin 0 5.043158785685874vmin currentColor;
+}
+.background span:nth-child(8) {
+  color: #583C87;
+  top: 91%;
+  left: 51%;
+  animation-duration: 6s;
+  animation-delay: -30s;
+  transform-origin: -24vw -18vh;
+  box-shadow: 40vmin 0 5.627877086242824vmin currentColor;
+}
+.background span:nth-child(9) {
+  color: #583C87;
+  top: 23%;
+  left: 5%;
+  animation-duration: 33s;
+  animation-delay: -46s;
+  transform-origin: -3vw -19vh;
+  box-shadow: -40vmin 0 5.889895986288824vmin currentColor;
+}
+.background span:nth-child(10) {
+  color: #583C87;
+  top: 47%;
+  left: 44%;
+  animation-duration: 40s;
+  animation-delay: -5s;
+  transform-origin: -7vw -2vh;
+  box-shadow: -40vmin 0 5.577375141582896vmin currentColor;
+}
+.background span:nth-child(11) {
+  color: #E45A84;
+  top: 7%;
+  left: 16%;
+  animation-duration: 21s;
+  animation-delay: -46s;
+  transform-origin: -22vw -16vh;
+  box-shadow: -40vmin 0 5.8761838389091725vmin currentColor;
+}
+.background span:nth-child(12) {
+  color: #FFACAC;
+  top: 62%;
+  left: 75%;
+  animation-duration: 26s;
+  animation-delay: -14s;
+  transform-origin: 13vw 19vh;
+  box-shadow: -40vmin 0 5.0171288358645505vmin currentColor;
+}
+.background span:nth-child(13) {
+  color: #583C87;
+  top: 19%;
+  left: 49%;
+  animation-duration: 29s;
+  animation-delay: -3s;
+  transform-origin: 14vw 16vh;
+  box-shadow: -40vmin 0 5.955845113925683vmin currentColor;
+}
+.background span:nth-child(14) {
+  color: #583C87;
+  top: 55%;
+  left: 13%;
+  animation-duration: 33s;
+  animation-delay: -38s;
+  transform-origin: 0vw -13vh;
+  box-shadow: 40vmin 0 5.384406821554561vmin currentColor;
+}
+.background span:nth-child(15) {
+  color: #583C87;
+  top: 80%;
+  left: 82%;
+  animation-duration: 10s;
+  animation-delay: -8s;
+  transform-origin: -11vw -20vh;
+  box-shadow: -40vmin 0 5.938177186016543vmin currentColor;
+}
+.background span:nth-child(16) {
+  color: #E45A84;
+  top: 96%;
+  left: 18%;
+  animation-duration: 19s;
+  animation-delay: -37s;
+  transform-origin: -15vw -22vh;
+  box-shadow: -40vmin 0 5.394594106355625vmin currentColor;
+}
+.background span:nth-child(17) {
+  color: #FFACAC;
+  top: 92%;
+  left: 63%;
+  animation-duration: 14s;
+  animation-delay: -4s;
+  transform-origin: -21vw -7vh;
+  box-shadow: -40vmin 0 5.833123042483153vmin currentColor;
+}
+.background span:nth-child(18) {
+  color: #E45A84;
+  top: 47%;
+  left: 10%;
+  animation-duration: 31s;
+}
+body {
+  margin: 0;
+  padding: 0; 
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+.login-box {
+  width: 320px;
+  height: 350px;
+  border-radius: 20%;
+  background: #1b12229f;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+
+.login-box .avatar {
+  width: 140px;
+  height: 120px;
+  border-radius: 20%;
+  position: absolute;
+  top: -70px;
+  left: calc(50% - 50px);
+}
+
+.login-box h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.login-box label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+}
+
+.login-box input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-box input[type="text"], .login-box input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.login-box input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #aa0fb8;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.login-box input[type="submit"]:hover {
+  cursor: pointer;
+  background: #b007ff;
+  color: #f8f5f5;
+}
+
+.login-box a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: darkgrey;
+}
+
+.login-box a:hover {
+  color: #fff;
+}

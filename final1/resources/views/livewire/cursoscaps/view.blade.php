@@ -7,18 +7,18 @@
 					<div style="display: flex; justify-content: space-between; align-items: center;">
 						<div class="float-left">
 							<h4><i class="fab fa-laravel text-info"></i>
-							Cursoscap Listing </h4>
+							Consuta de Cursos </h4>
 						</div>
 						@if (session()->has('message'))
 						<div wire:poll.4s class="btn btn-sm btn-success" style="margin-top:0px; margin-bottom:0px;"> {{ session('message') }} </div>
 						@endif
 						<div>
-							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Search Cursoscaps">
+							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Buscar Curso">
 						</div>
 						<div class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#createDataModal">
-						<i class="fa fa-plus"></i>  Add Cursoscaps
+						<i class="fa fa-plus"></i>  Añadir Curso
 						</div>
-						<div><a href="{{ route('generar-pdfcursos') }}" class="btn btn-sm btn-info">Ver Reporte</a></div>
+						<div><a href="{{ route('generar-pdfcursos') }}" class="btn btn-sm btn-info" target="blank">Ver Reporte</a></div>
 					</div>
 				</div>
 
@@ -29,16 +29,16 @@
 						<thead class="thead">
 							<tr>
 								<td>#</td>
-								<th>Cliente Id</th>
-								<th>Nombre Cursoscaps</th>
-								<th>Descipcion Cursoscaps</th>
-								<th>Publicacion Cursoscaps</th>
-								<th>Edadmin Cursoscaps</th>
-								<th>Edadmax Cursoscaps</th>
-								<th>Link Cursoscaps</th>
-								<th>Cupos Cursoscaps</th>
-								<th>Costo Cursoscaps</th>
-								<td>ACTIONS</td>
+								<th># Cliente</th>
+								<th>Nombre</th>
+								<th>Descipcion</th>
+								<th>Publicacion</th>
+								<th>Edad mínima</th>
+								<th>Edad máxima</th>
+								<th>Link de curso</th>
+								<th>Cupos</th>
+								<th>Costo $ </th>
+								<td>Acciones</td>
 							</tr>
 						</thead>
 						<tbody>

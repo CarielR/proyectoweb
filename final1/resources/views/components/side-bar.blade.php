@@ -80,26 +80,6 @@
       <br>
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-<<<<<<< Updated upstream
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-              <a href="{{ url('/cursoscaps') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Cursoscaps</a>
-                <a href="{{ url('/servicios') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Servicios</a>
-                <a href="{{ url('/empleos') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Empleos</a>
-                <a href="{{ url('/eventos') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Eventos</a>
-                <a href="{{ url('/clientes') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Clientes</a>
-                <a href="{{ url('/generos') }}" class="nav-link active" style="background-color: #D363AC;"><i class=""></i> Generos</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-=======
       <ul class="menu-horizontal">	
         
       
@@ -111,7 +91,7 @@
         <img src="assets/dashboard.svg" class="list__img">
         <a href="#" class="nav__link">CATEGORIAS</a>
         <img src="assets/arrow.svg" class="list__arrow">
->>>>>>> Stashed changes
+
     </div>
 
     <ul class="list__show">    
@@ -156,7 +136,7 @@
 </li>
 
     <!-- /.sidebar -->
-  </aside>
+  </aside> 
   @livewireScripts
     <script type="module">
         const addModal = new bootstrap.Modal('#createDataModal');
@@ -165,11 +145,8 @@
            addModal.hide();
            editModal.hide();
         })
-<<<<<<< Updated upstream
-    </script>
-=======
-    </script> 
+
         <script src="main.js"></script>
->>>>>>> Stashed changes
+
   </body>
   </html>

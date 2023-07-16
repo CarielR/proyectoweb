@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="img/AW.png">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
-  <meta content="" name="description"> 
+  <meta content="" name="description">
 
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,12 +20,12 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-        
+
 
         <!-- Styles -->
         <style>
             .logIn{
-                
+
                 padding: 2px;
                 text-align: right;
             }
@@ -48,18 +48,18 @@
             }
         </style>
 
-   
+
 
     </head>
     <body class="antialiased">
-       
+
  <!--==========================
   Sección de encabezado
   ============================-->
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        
+
         <!-- Descomenta abajo si prefieres usar una imagen de texto -->
         <!--<h1><a href="#hero">Encabezado 1</a></h1>-->
       </div>
@@ -70,7 +70,7 @@
             @if (Route::has('login'))
                 <div >
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
+                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Dashboard</a>
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Iniciar sesión</a>
 
@@ -80,13 +80,13 @@
                     @endauth
                 </div>
             @endif
-        </div>     
+        </div>
 
 
         <ul class="nav-menu">
           <li class="menu-active"><a href="#Home">Home</a></li>
           <li><a href="#about">Acerca de</a></li>
-          <li><a href="#culture">Cultura Organizacional</a></li>         
+          <li><a href="#culture">Cultura Organizacional</a></li>
           <!-- <li><a href="#team">Team</a></li>
           <li class="menu-has-children"><a href="">Drop Down</a>
             <ul>
@@ -106,17 +106,17 @@
             </ul>
           </li>
           <li><a href="#contact">Contact Us</a></li> -->
-         
-          
+
+
           <li><a href="#testimonials">Socias-Accionistas</a></li>
           <li><a href="#contact">Contactos</a></li>
 
           <!-- <div class="container">
             <div id="logo" >
-              <a href="#hero"><img src="img/AW.png" alt="" title="" /></img></a>              
+              <a href="#hero"><img src="img/AW.png" alt="" title="" /></img></a>
             </div> -->
 
-           
+
         </ul>
       </nav>
       <!-- #nav-menu-container -->
@@ -127,24 +127,24 @@
   <!--==========================
   About Section
   ============================-->
-  <section class="centralimg" id="Home">   
+  <section class="centralimg" id="Home">
     <img src="img/central.png" alt="">
     <div class="text-containerC">
-      <p class="typing-effect" style="color: aliceblue;">Transformamos datos en información para la toma de 
+      <p class="typing-effect" style="color: aliceblue;">Transformamos datos en información para la toma de
         desiciones.</p>
         <br>
     </div>
   </section>
 
 
-  <section id="about">     
+  <section id="about">
     <br><br><br><br><br><br>
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12">
           <h3 class="section-title"><img src="img/quienessomos.png" alt="" width="50px" style="margin: 10px;"><span style="color: rgba(255, 9, 222, 0.863);">¿</span> Quiénes somos <span style="color: rgba(255, 9, 222, 0.863);">?</span></h3>
           <div class="section-title-divider"></div>
-          <p class="section-description" style="font-size: 20px;">Somos una empresa conformada por un grupo multidisciplinario de mujeres profesionales de diferentes provincias del país, con una trayectoria importante de trabajo y experiencias en empresas públicas y privadas; tenemos un recorrido amplio de trabajo social 
+          <p class="section-description" style="font-size: 20px;">Somos una empresa conformada por un grupo multidisciplinario de mujeres profesionales de diferentes provincias del país, con una trayectoria importante de trabajo y experiencias en empresas públicas y privadas; tenemos un recorrido amplio de trabajo social
             con grupo de atención prioritaria.</p>
             <p class="section-description" style="font-size: 20px;">Somos multifacéticas y creemos que la mujer está preparada para hacer que las cosas sucedan.</p>
         </div>
@@ -156,25 +156,28 @@
 
 
     <!--Mison y vision-->
-    
+
     <div class="MV">
       <img src="img/vision.png" alt="Imagen" class="visionmision">
       <div class="text-containerMV">
         <h1 class="h1VM">Visión</h1>
-        <p class="texMV" style="font-size: 20px;">Ser una compañía ecuatoriana eferente en el ámbito de la investigación financiera, económica,
-          social y política, aportando al bienestar y desarrollo humano, cumpliendo estándares de calidad,
-          buenas prácticas y aplicando metodologías innovadoras en la investigación y análisis de información.</p>
+        <p class="texMV" style="font-size: 20px;">
+            @foreach($vision as $vision)
+                {{ $vision }}
+            @endforeach
+        </p>
       </div>
 
       <img src="img/enfocar.png" alt="Imagen" class="visionmision">
       <div class="text-containerMV">
         <h1 class="h1VM">Misión</h1>
-        <p class="texMV" style="font-size: 20px;">Transformar data en información mediante conceptos innovadores y ágiles,
-        para que las organizaciones e instituciones públicas y privadas,cuenten con las mejores 
-        soluciones en la toma de decisiones a nivel técnico, económico, político y social; considerando
-        enfoques de tipo intergeneracional, intersectorial, intercultural, ambiental, de género y movilidad. </p>
+        <p class="texMV" style="font-size: 20px;">
+            @foreach($mision as $mision)
+                {{ $mision }}
+            @endforeach
+        </p>
       </div>
-    </div>  
+    </div>
 
   </section>
 
@@ -194,11 +197,11 @@
 
       <div class="MV">
                  <img src="img/lider.png" alt="Imagen" class="vibrating-image">
-           <div class="text-containerMV">         
+           <div class="text-containerMV">
                   <p class="texlider"><span style="color: rgba(255, 9, 222, 0.863);">"</span>Las mujeres debemos prepararnos constantemente en diferentes áreas del conocimiento, para aprovechar las oportunidades y enfrentar los desafíos<span style="color: rgba(255, 9, 222, 0.863);">"</span></p>
-           </div> 
+           </div>
       </div>
-       
+
   </section>
 
   <!--==========================
@@ -212,7 +215,7 @@
           <p class="subscribe-text" style="font-size: 20px;">El modelo de negocio de Analytika Women está orientado a generar información para la toma de
             decisiones en:  Instituciones Públicas, Privadas y ONGs.
             </p>
-        </div>        
+        </div>
       </div>
     </div>
   </section>
@@ -220,16 +223,16 @@
   <!--==========================
   cultura organizacional
   ============================-->
-  <section id="culture">    
+  <section id="culture">
     <br><br><br>
-    <div class="hero"> 
-      
+    <div class="hero">
+
       <div class="container wow fadeInUp">
         <div class="row">
           <div class="col-md-12">
             <h3 class="section-title">Cultura Organizacional</h3>
             <div class="section-title-divider"></div>
-            <div class="imcl">           
+            <div class="imcl">
             <p style="font-size: 30px; color: rgb(0, 0, 0);">Nuestra empresa promueve la cultura de
               la integridad personal, para proponer
               las mejores alternativas frente a las
@@ -237,13 +240,13 @@
               solicitados; para lo cual nos apoyamos
               de un equipo multidisciplinario de
               profesionales con equidad de género.</p>
-          </div>          
-          <img src="img/stud.jpg" alt="" class="resized-image"> 
           </div>
-        </div>      
-            
-            </a>          
-              
+          <img src="img/stud.jpg" alt="" class="resized-image">
+          </div>
+        </div>
+
+            </a>
+
       </div>
       <div class="cube"></div>
       <div class="cube"></div>
@@ -251,22 +254,22 @@
       <div class="cube"></div>
       <div class="cube"></div>
       <div class="cube"></div>
-    </div>   
-    
+    </div>
+
   </section>
 
   <!--==========================
   Accionistas
   ============================-->
   <section id="testimonials">
-    
+
     <br><br><br><br><br>
-    
+
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12">
           <h3 class="section-title">Socias - Accionistas</h3>
-          <div class="section-title-divider"></div>          
+          <div class="section-title-divider"></div>
         </div>
       </div>
       <!-- SOCIA1 -->
@@ -294,13 +297,13 @@
           </div>
         </div>
       </div>
-      
+
       <br>
       <div class="row">
         <div class="col-md-9">
           <div class="quote">
             <b><img src="img/quote_sign_left.png" alt=""></b> Arquitecta con maestría en Dirección de Proyectos.  Certificación en Prevención de riesgos laborales: construcción y obras públicas. Cursando Diplomado en
-            Gestión de Empresas Constructoras, de Arquitectura e Inmobiliarias. Estudios en liderazgo y productividad.  <br><br>  
+            Gestión de Empresas Constructoras, de Arquitectura e Inmobiliarias. Estudios en liderazgo y productividad.  <br><br>
             Experiencia en fiscalización de obras civiles e infraestructura urbana. Desarrollo de estudios de consultoría de arquitectura e ingeniería. Coordinadora y
             parte del equipo de proyectos de consultoría de ingeniería en el ámbito de infraestructura sanitaria en entidades públicas. Manejo de equipos
             multidisciplinarios.Desarrollo y evaluación de proyectos. Coordinación y desarrollo de estudios socioeconómicos y de mercado para consultorías de
@@ -330,7 +333,7 @@
           <div class="quote">
             <b><img src="img/quote_sign_left.png" alt=""></b> Economista UCE. Socia del Colegio de Economistas de Pichincha. Profesional orientada a objetivos y metas medibles. Certificación en Resiliencia Laboral,
             habilidades blandas y atención al cliente (Enfoque en la norma ISO 9001-2015). Certificación Internacional en Hubspot. Escuela de formadores y capacitadores
-            banco del Pacífico. <br><br> 
+            banco del Pacífico. <br><br>
             Experiencia: Elaboración de Presupuestos comerciales y determinación del mercado objetivo. Manejo operacional, Digital, Ventas Inbound. Comercio electrónico y
             de servicios. Elaboración de lineamentos comerciales con aplicación nacional. Diseño y manejo de indicadores comerciales y de productividad.Captación y
             mantenimiento de socios corporativos. Formular y evaluar planes para  la implementación de estrategias comerciales. Gestión área comercial (Instituciones
@@ -376,14 +379,14 @@
             </div>
           </div>
         </div>
-        
-       
+
+
 
       </div>
     </div>
   </section>
 
-  
+
 
   <!--==========================
   Footer
@@ -396,7 +399,7 @@
           <div class="copyright">
             &copy; Copyright <strong>Analytika Women</strong>. All Rights Reserved
           </div>
-          <div class="credits">        
+          <div class="credits">
             <a href="#Home">Analytika Women</a>
           </div>
         </div>
@@ -404,8 +407,8 @@
     </div>
   </footer>
   <!-- #footer -->
-  @endsection 
-  <x-footer /> 
+  @endsection
+  <x-footer />
 
     </body>
 </html>

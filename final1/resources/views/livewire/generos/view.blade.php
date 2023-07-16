@@ -7,21 +7,21 @@
 					<div style="display: flex; justify-content: space-between; align-items: center;">
 						<div class="float-left">
 							<h4><i class="fab fa-laravel text-info"></i>
-							Genero Listing </h4>
+							Consultar Género </h4>
 						</div>
 						@if (session()->has('message'))
 						<div wire:poll.4s class="btn btn-sm btn-success" style="margin-top:0px; margin-bottom:0px;"> {{ session('message') }} </div>
 						@endif
 						<div>
-							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Search Generos">
+							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Buscar Generos">
 						</div>
 						<div class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#createDataModal">
-						<i class="fa fa-plus"></i>  Add Generos
+						<i class="fa fa-plus"></i>  Añadir Género
 						</div>
-						<div><a href="{{ route('generar-pdfgeneros') }}" class="btn btn-sm btn-info">PDF</a></div>
+						<div><a href="{{ route('generar-pdfgeneros') }}" class="btn btn-sm btn-info">Ver Reporte</a></div>
 					</div>
 				</div>
-				
+
 				<div class="card-body">
 						@include('livewire.generos.modals')
 				<div class="table-responsive">
@@ -29,14 +29,14 @@
 						<thead class="thead">
 							<tr> 
 								<td>#</td> 
-								<th>Nombre Gen</th>
-								<td>ACTIONS</td>
+								<th>Nombre de Género</th>
+								<td>Acciones</td>
 							</tr>
 						</thead>
 						<tbody>
 							@forelse($generos as $row)
 							<tr>
-								<td>{{ $loop->iteration }}</td> 
+								<td>{{ $loop->iteration }}</td>
 								<td>{{ $row->Nombre_gen }}</td>
 								<td width="90">
 									<div class="dropdown">
@@ -45,18 +45,18 @@
 										</a>
 										<ul class="dropdown-menu">
 											<li><a data-bs-toggle="modal" data-bs-target="#updateDataModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Edit </a></li>
-											<li><a class="dropdown-item" onclick="confirm('Confirm Delete Genero id {{$row->id}}? \nDeleted Generos cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a></li>  
+											<li><a class="dropdown-item" onclick="confirm('Confirm Delete Genero id {{$row->id}}? \nDeleted Generos cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Eliminar </a></li>  
 										</ul>
-									</div>								
+									</div>
 								</td>
 							</tr>
 							@empty
 							<tr>
-								<td class="text-center" colspan="100%">No data Found </td>
+								<td class="text-center" colspan="100%">Género no encontrado</td>
 							</tr>
 							@endforelse
 						</tbody>
-					</table>						
+					</table>
 					<div class="float-end">{{ $generos->links() }}</div>
 					</div>
 				</div>

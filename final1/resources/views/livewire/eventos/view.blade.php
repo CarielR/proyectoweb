@@ -13,15 +13,15 @@
 						<div wire:poll.4s class="btn btn-sm btn-success" style="margin-top:0px; margin-bottom:0px;"> {{ session('message') }} </div>
 						@endif
 						<div>
-							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Search Eventos">
+							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Buscar Eventos">
 						</div>
 						<div class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#createDataModal">
-						<i class="fa fa-plus"></i>  Add Eventos
+						<i class="fa fa-plus"></i>  Añadir Eventos
 						</div>
-						<div><a href="{{ route('generar-pdfevento') }}" class="btn btn-sm btn-info">PDF</a></div>
+						<div><a href="{{ route('generar-pdfevento') }}" class="btn btn-sm btn-info">Ver Reporte</a></div>
 					</div>
 				</div>
-				
+
 				<div class="card-body">
 						@include('livewire.eventos.modals')
 				<div class="table-responsive">
@@ -29,19 +29,19 @@
 						<thead class="thead">
 							<tr> 
 								<td>#</td> 
-								<th>Nombre Event</th>
-								<th>Descripcion Event</th>
-								<th>Fecha Event</th>
-								<th>Horas Event</th>
-								<th>Ubicacion Event</th>
-								<th>Observacion Event</th>
-								<td>ACTIONS</td>
+								<th>Nombre</th>
+								<th>Descripcion</th>
+								<th>Fecha</th>
+								<th>Horas</th>
+								<th>Ubicacion </th>
+								<th>Observacion </th>
+								<td>Acciones</td>
 							</tr>
 						</thead>
 						<tbody>
 							@forelse($eventos as $row)
 							<tr>
-								<td>{{ $loop->iteration }}</td> 
+								<td>{{ $loop->iteration }}</td>
 								<td>{{ $row->nombre_event }}</td>
 								<td>{{ $row->descripcion_event }}</td>
 								<td>{{ $row->fecha_event }}</td>
@@ -55,9 +55,9 @@
 										</a>
 										<ul class="dropdown-menu">
 											<li><a data-bs-toggle="modal" data-bs-target="#updateDataModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Edit </a></li>
-											<li><a class="dropdown-item" onclick="confirm('Confirm Delete Evento id {{$row->id}}? \nDeleted Eventos cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a></li>  
+											<li><a class="dropdown-item" onclick="confirm('Confirm Delete Evento id {{$row->id}}? \nDeleted Eventos cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a></li>
 										</ul>
-									</div>								
+									</div>
 								</td>
 							</tr>
 							@empty
@@ -66,7 +66,7 @@
 							</tr>
 							@endforelse
 						</tbody>
-					</table>						
+					</table>
 					<div class="float-end">{{ $eventos->links() }}</div>
 					</div>
 				</div>

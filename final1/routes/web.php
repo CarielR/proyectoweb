@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SacarDato;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,15 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[SacarDato::class, 'index']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Route Hooks - Do not delete//
+	Route::view('datoshome', 'livewire.datoshomes.index')->middleware('auth');
 	Route::view('cursoscaps', 'livewire.cursoscaps.index')->middleware('auth');
 	Route::view('servicios', 'livewire.servicios.index')->middleware('auth');
 	Route::view('empleos', 'livewire.empleos.index')->middleware('auth');
@@ -53,4 +53,3 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 		$pdf = PDF::loadView('livewire.empleos-pdf');
 		return $pdf->stream('empleos.pdf');
 	})->name('generar-pdfempleo');
-	

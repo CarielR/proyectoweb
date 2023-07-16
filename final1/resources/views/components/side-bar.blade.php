@@ -145,7 +145,7 @@
            addModal.hide();
            editModal.hide();
         })
-
+</script>
         <script src="main.js"></script>
 
   </body>

@@ -161,18 +161,21 @@
       <img src="img/vision.png" alt="Imagen" class="visionmision">
       <div class="text-containerMV">
         <h1 class="h1VM">Visión</h1>
-        <p class="texMV" style="font-size: 20px;">Ser una compañía ecuatoriana eferente en el ámbito de la investigación financiera, económica,
-          social y política, aportando al bienestar y desarrollo humano, cumpliendo estándares de calidad,
-          buenas prácticas y aplicando metodologías innovadoras en la investigación y análisis de información.</p>
+        <p class="texMV" style="font-size: 20px;">
+            @foreach($vision as $vision)
+                {{ $vision }}
+            @endforeach
+        </p>
       </div>
 
       <img src="img/enfocar.png" alt="Imagen" class="visionmision">
       <div class="text-containerMV">
         <h1 class="h1VM">Misión</h1>
-        <p class="texMV" style="font-size: 20px;">Transformar data en información mediante conceptos innovadores y ágiles,
-        para que las organizaciones e instituciones públicas y privadas,cuenten con las mejores
-        soluciones en la toma de decisiones a nivel técnico, económico, político y social; considerando
-        enfoques de tipo intergeneracional, intersectorial, intercultural, ambiental, de género y movilidad. </p>
+        <p class="texMV" style="font-size: 20px;">
+            @foreach($mision as $mision)
+                {{ $mision }}
+            @endforeach
+        </p>
       </div>
     </div>
 

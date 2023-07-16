@@ -8,7 +8,6 @@
             </div>
            <div class="modal-body">
 				<form>
-                <input type="hidden" wire:model="selected_id">
                     <div class="form-group">
                         <label for="cliente_id">Id del Cliente</label>
                         <input wire:model="cliente_id" type="text" class="form-control" id="cliente_id" placeholder="Incerte el iD del Cliente">@error('cliente_id') <span class="error text-danger">{{ $message }}</span> @enderror

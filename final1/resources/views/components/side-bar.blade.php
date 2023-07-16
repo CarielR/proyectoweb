@@ -2,6 +2,8 @@
 <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.css%22%3E">
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link href="css/desplegable.css" rel="stylesheet">
+
   <style>
     .siderbar:hover {
         background-color: red;
@@ -78,25 +80,61 @@
       <br>
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ url('/cursoscaps') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Cursos</a> 
-                <a href="{{ url('/servicios') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Servicios</a>  
-                <a href="{{ url('/empleos') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Empleos</a>       
-                <a href="{{ url('/eventos') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Eventos</a>     
-                <a href="{{ url('/clientes') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Clientes</a>   
-                <a href="{{ url('/generos') }}" class="nav-link active"><i class="fab fa-laravel text-info"></i> Generos</a> 
-              </li> 
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
+      <ul class="menu-horizontal">	
+        
+      
+      <ul class="list">
+
+
+<li class="list__item list__item--click">
+    <div class="list__button list__button--click">
+        <img src="assets/dashboard.svg" class="list__img">
+        <a href="#" class="nav__link">CATEGORIAS</a>
+        <img src="assets/arrow.svg" class="list__arrow">
+
     </div>
+
+    <ul class="list__show">    
+    <li><a href="{{ url('/servicios') }}" ><i class=""></i> Servicios</a></li>  
+    <li><a href="{{ url('/eventos') }}" ><i class=""></i> Eventos</a></li>     
+    <li><a href="{{ url('/empleos') }}" ><i class=""></i> Empleos</a></li>       
+    <li><a href="{{ url('/generos') }}" ><i class=""></i> Generos</a> </li>
+    <li><a href="{{ url('/clientes') }}" ><i class=""></i> Clientes</a></li>   
+    </ul>
+
+</li>
+
+
+<li class="list__item list__item--click">
+    <div class="list__button list__button--click">
+        <img src="assets/bell.svg" class="list__img">
+        <a href="#" class="nav__link">REPORTES</a>
+        <img src="assets/arrow.svg" class="list__arrow">
+    </div>
+
+    <ul class="list__show">
+        <li class="list__inside">
+            <a href="#" class="nav__link nav__link--inside">REPORT</a>
+        </li>
+
+        <li class="list__inside">
+            <a href="#" class="nav__link nav__link--inside">REPORT</a>
+        </li>
+
+        <li class="list__inside">
+            <a href="#" class="nav__link nav__link--inside">REPORT</a>
+        </li>
+
+        <li class="list__inside">
+            <a href="#" class="nav__link nav__link--inside">REPORT</a>
+        </li>
+
+        <li class="list__inside">
+            <a href="#" class="nav__link nav__link--inside">REPORT</a>
+        </li>
+    </ul>
+</li>
+
     <!-- /.sidebar -->
   </aside> 
   @livewireScripts
@@ -107,6 +145,8 @@
            addModal.hide();
            editModal.hide();
         })
-    </script> 
+</script>
+        <script src="main.js"></script>
+
   </body>
   </html>

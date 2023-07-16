@@ -81,7 +81,6 @@
         color: #999999;
     }
 </style>
-
 <div class="container">
     <div class="report-header">
         <h2>Reporte de Empleos</h2>

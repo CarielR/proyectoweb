@@ -33,6 +33,9 @@
                     <ul class="navbar-nav mr-auto">
 						<!--Nav Bar Hooks - Do not delete!!-->
 						<li class="nav-item">
+                            <a href="{{ url('/datoshome') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Datoshome</a> 
+                        </li>
+						<li class="nav-item">
                             <a href="{{ url('/cursoscaps') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Cursoscaps</a> 
                         </li>
 						<li class="nav-item">

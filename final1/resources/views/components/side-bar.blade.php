@@ -2,6 +2,8 @@
 <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.css%22%3E">
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link href="css/desplegable.css" rel="stylesheet">
+
   <style>
     .siderbar:hover {
         background-color: red;
@@ -78,6 +80,7 @@
       <br>
       <!-- Sidebar Menu -->
       <nav class="mt-2">
+<<<<<<< Updated upstream
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
@@ -96,7 +99,62 @@
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
+=======
+      <ul class="menu-horizontal">	
+        
+      
+      <ul class="list">
+
+
+<li class="list__item list__item--click">
+    <div class="list__button list__button--click">
+        <img src="assets/dashboard.svg" class="list__img">
+        <a href="#" class="nav__link">CATEGORIAS</a>
+        <img src="assets/arrow.svg" class="list__arrow">
+>>>>>>> Stashed changes
     </div>
+
+    <ul class="list__show">    
+    <li><a href="{{ url('/servicios') }}" ><i class=""></i> Servicios</a></li>  
+    <li><a href="{{ url('/eventos') }}" ><i class=""></i> Eventos</a></li>     
+    <li><a href="{{ url('/empleos') }}" ><i class=""></i> Empleos</a></li>       
+    <li><a href="{{ url('/generos') }}" ><i class=""></i> Generos</a> </li>
+    <li><a href="{{ url('/clientes') }}" ><i class=""></i> Clientes</a></li>   
+    </ul>
+
+</li>
+
+
+<li class="list__item list__item--click">
+    <div class="list__button list__button--click">
+        <img src="assets/bell.svg" class="list__img">
+        <a href="#" class="nav__link">REPORTES</a>
+        <img src="assets/arrow.svg" class="list__arrow">
+    </div>
+
+    <ul class="list__show">
+        <li class="list__inside">
+            <a href="#" class="nav__link nav__link--inside">REPORT</a>
+        </li>
+
+        <li class="list__inside">
+            <a href="#" class="nav__link nav__link--inside">REPORT</a>
+        </li>
+
+        <li class="list__inside">
+            <a href="#" class="nav__link nav__link--inside">REPORT</a>
+        </li>
+
+        <li class="list__inside">
+            <a href="#" class="nav__link nav__link--inside">REPORT</a>
+        </li>
+
+        <li class="list__inside">
+            <a href="#" class="nav__link nav__link--inside">REPORT</a>
+        </li>
+    </ul>
+</li>
+
     <!-- /.sidebar -->
   </aside>
   @livewireScripts
@@ -107,6 +165,11 @@
            addModal.hide();
            editModal.hide();
         })
+<<<<<<< Updated upstream
     </script>
+=======
+    </script> 
+        <script src="main.js"></script>
+>>>>>>> Stashed changes
   </body>
   </html>

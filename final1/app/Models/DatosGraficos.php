@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class DatosGraficos extends Model
 {
     use HasFactory;
+
+
 }

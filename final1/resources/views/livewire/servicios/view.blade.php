@@ -28,7 +28,7 @@
 				<div class="table-responsive">
 					<table class="table table-bordered table-sm">
 						<thead class="thead">
-							<tr> 
+							<tr>
 
 								<td>#</td>
 								<th>Id del Cliente</th>
@@ -43,7 +43,7 @@
 							@forelse($servicios as $row)
 							<tr>
 								<td>{{ $loop->iteration }}</td>
-								<td>{{ $row->cliente_id }}</td>
+								<td>{{ $row->cliente->nombre_cli }}</td>
 								<td>{{ $row->nombre_serv }}</td>
 								<td>{{ $row->descripcion_serv }}</td>
 								<td>{{ $row->precio_serv }}</td>

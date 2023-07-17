@@ -1,4 +1,8 @@
 <!-- Add Modal -->
+@php
+$clientes = DB::table('clientes')->select('id','nombre_cli')->get();
+
+@endphp
 <div wire:ignore.self class="modal fade" id="createDataModal" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="createDataModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -9,8 +13,17 @@
            <div class="modal-body">
 				<form>
                     <div class="form-group">
-                        <label for="cliente_id">Id del Cliente</label>
-                        <input wire:model="cliente_id" type="text" class="form-control" id="cliente_id" >@error('cliente_id') <span class="error text-danger">{{ $message }}</span> @enderror
+
+                    <label for="cliente_id">Cliente</label>
+                        <select wire:model="cliente_id" class="form-control" id="cliente_id">
+                        <option value="">Seleccione un cliente</option>
+                            @foreach ($clientes as $cliente)
+                                <option value="{{ $cliente->id }}">{{ $cliente->nombre_cli }}</option>
+                            @endforeach
+                        </select>
+                        @error('cliente_id') <span class="error text-danger">{{ $message }}</span> @enderror
+
+
                     </div>
                     <div class="form-group">
                         <label for="nombre_serv">Nombre</label>
@@ -45,9 +58,19 @@
             </div>
             <div class="modal-body">
                 <form>
-                <div class="form-group">
-                        <label for="cliente_id">Id del Cliente</label>
-                        <input wire:model="cliente_id" type="text" class="form-control" id="cliente_id" >@error('cliente_id') <span class="error text-danger">{{ $message }}</span> @enderror
+                    <div class="form-group">
+
+                    label for="cliente_id">Cliente</label>
+                        <select wire:model="cliente_id" class="form-control" id="cliente_id">
+                        <option value="">Seleccione un cliente</option>
+                            @foreach ($clientes as $cliente)
+                                <option value="{{ $cliente->id }}">{{ $cliente->nombre_cli }}</option>
+                            @endforeach
+                        </select>
+                        @error('cliente_id') <span class="error text-danger">{{ $message }}</span> @enderror
+
+
+
                     </div>
                     <div class="form-group">
                         <label for="nombre_serv">Nombre</label>

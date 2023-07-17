@@ -46,7 +46,7 @@
 							@forelse($clientes as $row)
 							<tr>
 								<td>{{ $loop->iteration }}</td>
-								<td>{{ $row->genero_id }}</td>
+								<td>{{ $row->genero->Nombre_gen }}</td>
 								<td>{{ $row->nombre_cli }}</td>
 								<td>{{ $row->fecha_nac_cli }}</td>
 								<td>{{ $row->telefono1_cli }}</td>

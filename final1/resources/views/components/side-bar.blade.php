@@ -114,23 +114,23 @@
 
     <ul class="list__show">
         <li class="list__inside">
-            <a href="{{ route('generar-pdf') }}" class="nav__link nav__link--inside">Clientes</a>
+            <a href="{{ route('generar-pdf') }}" class="nav__link nav__link--inside" target="blank">Clientes</a>
         </li>
 
         <li class="list__inside">
-            <a href="{{ route('generar-pdfempleo') }}" class="nav__link nav__link--inside">Empleos</a>
+            <a href="{{ route('generar-pdfempleo') }}" class="nav__link nav__link--inside" target="blank">Empleos</a>
         </li>
 
         <li class="list__inside">
-            <a href="{{ route('generar-pdfcursos') }}" class="nav__link nav__link--inside">Cursos</a>
+            <a href="{{ route('generar-pdfcursos') }}" class="nav__link nav__link--inside" target="blank">Cursos</a>
         </li>
 
         <li class="list__inside">
-            <a href="{{ route('generar-pdfevento') }}" class="nav__link nav__link--inside">Eventos</a>
+            <a href="{{ route('generar-pdfevento') }}" class="nav__link nav__link--inside" target="blank">Eventos</a>
         </li>
 
         <li class="list__inside">
-            <a href="{{ route('generar-pdfservicio') }}" class="nav__link nav__link--inside">Servicios</a>
+            <a href="{{ route('generar-pdfservicio') }}" class="nav__link nav__link--inside" target="blank">Servicios</a>
         </li>
     </ul>
 </li>

@@ -11,7 +11,7 @@ class Datoshomes extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $vision, $mision, $contactos;
+    public $selected_id, $keyWord, $vision, $mision, $contactos, $email, $quienes_somos, $Cultura_Org;
 
     public function render()
     {
@@ -21,20 +21,26 @@ class Datoshomes extends Component
 						->orWhere('vision', 'LIKE', $keyWord)
 						->orWhere('mision', 'LIKE', $keyWord)
 						->orWhere('contactos', 'LIKE', $keyWord)
+						->orWhere('email', 'LIKE', $keyWord)
+						->orWhere('quienes_somos', 'LIKE', $keyWord)
+						->orWhere('Cultura_Org', 'LIKE', $keyWord)
 						->paginate(10),
         ]);
     }
-
+	
     public function cancel()
     {
         $this->resetInput();
     }
-
+	
     private function resetInput()
-    {
+    {		
 		$this->vision = null;
 		$this->mision = null;
 		$this->contactos = null;
+		$this->email = null;
+		$this->quienes_somos = null;
+		$this->Cultura_Org = null;
     }
 
     public function store()
@@ -43,14 +49,20 @@ class Datoshomes extends Component
 		'vision' => 'required',
 		'mision' => 'required',
 		'contactos' => 'required',
+		'email' => 'required',
+		'quienes_somos' => 'required',
+		'Cultura_Org' => 'required',
         ]);
 
-        Datoshome::create([
+        Datoshome::create([ 
 			'vision' => $this-> vision,
 			'mision' => $this-> mision,
-			'contactos' => $this-> contactos
+			'contactos' => $this-> contactos,
+			'email' => $this-> email,
+			'quienes_somos' => $this-> quienes_somos,
+			'Cultura_Org' => $this-> Cultura_Org
         ]);
-
+        
         $this->resetInput();
 		$this->dispatchBrowserEvent('closeModal');
 		session()->flash('message', 'Datoshome Successfully created.');
@@ -59,10 +71,13 @@ class Datoshomes extends Component
     public function edit($id)
     {
         $record = Datoshome::findOrFail($id);
-        $this->selected_id = $id;
+        $this->selected_id = $id; 
 		$this->vision = $record-> vision;
 		$this->mision = $record-> mision;
 		$this->contactos = $record-> contactos;
+		$this->email = $record-> email;
+		$this->quienes_somos = $record-> quienes_somos;
+		$this->Cultura_Org = $record-> Cultura_Org;
     }
 
     public function update()
@@ -71,14 +86,20 @@ class Datoshomes extends Component
 		'vision' => 'required',
 		'mision' => 'required',
 		'contactos' => 'required',
+		'email' => 'required',
+		'quienes_somos' => 'required',
+		'Cultura_Org' => 'required',
         ]);
 
         if ($this->selected_id) {
 			$record = Datoshome::find($this->selected_id);
-            $record->update([
+            $record->update([ 
 			'vision' => $this-> vision,
 			'mision' => $this-> mision,
-			'contactos' => $this-> contactos
+			'contactos' => $this-> contactos,
+			'email' => $this-> email,
+			'quienes_somos' => $this-> quienes_somos,
+			'Cultura_Org' => $this-> Cultura_Org
             ]);
 
             $this->resetInput();

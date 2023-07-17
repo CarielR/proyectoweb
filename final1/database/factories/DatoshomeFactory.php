@@ -16,6 +16,9 @@ class DatoshomeFactory extends Factory
 			'vision' => $this->faker->name,
 			'mision' => $this->faker->name,
 			'contactos' => $this->faker->name,
+			'email' => $this->faker->name,
+			'quienes_somos' => $this->faker->name,
+			'Cultura_Org' => $this->faker->name,
         ];
     }
 }

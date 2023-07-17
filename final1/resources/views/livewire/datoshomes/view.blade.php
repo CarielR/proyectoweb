@@ -31,6 +31,9 @@
 								<th>Vision</th>
 								<th>Mision</th>
 								<th>Contactos</th>
+								<th>Email</th>
+								<th>Quienes Somos</th>
+								<th>Cultura Org</th>
 								<td>ACTIONS</td>
 							</tr>
 						</thead>
@@ -41,6 +44,9 @@
 								<td>{{ $row->vision }}</td>
 								<td>{{ $row->mision }}</td>
 								<td>{{ $row->contactos }}</td>
+								<td>{{ $row->email }}</td>
+								<td>{{ $row->quienes_somos }}</td>
+								<td>{{ $row->Cultura_Org }}</td>
 								<td width="90">
 									<div class="dropdown">
 										<a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

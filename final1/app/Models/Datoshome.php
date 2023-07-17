@@ -13,6 +13,6 @@ class Datoshome extends Model
 
     protected $table = 'datoshome';
 
-    protected $fillable = ['vision','mision','contactos'];
+    protected $fillable = ['vision','mision','contactos','email','quienes_somos','Cultura_Org'];
 
 }

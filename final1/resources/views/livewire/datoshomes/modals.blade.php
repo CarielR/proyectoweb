@@ -20,6 +20,18 @@
                         <label for="contactos"></label>
                         <input wire:model="contactos" type="text" class="form-control" id="contactos" placeholder="Contactos">@error('contactos') <span class="error text-danger">{{ $message }}</span> @enderror
                     </div>
+                    <div class="form-group">
+                        <label for="email"></label>
+                        <input wire:model="email" type="text" class="form-control" id="email" placeholder="Email">@error('email') <span class="error text-danger">{{ $message }}</span> @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="quienes_somos"></label>
+                        <input wire:model="quienes_somos" type="text" class="form-control" id="quienes_somos" placeholder="Quienes Somos">@error('quienes_somos') <span class="error text-danger">{{ $message }}</span> @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="Cultura_Org"></label>
+                        <input wire:model="Cultura_Org" type="text" class="form-control" id="Cultura_Org" placeholder="Cultura Org">@error('Cultura_Org') <span class="error text-danger">{{ $message }}</span> @enderror
+                    </div>
 
                 </form>
             </div>
@@ -53,6 +65,18 @@
                     <div class="form-group">
                         <label for="contactos"></label>
                         <input wire:model="contactos" type="text" class="form-control" id="contactos" placeholder="Contactos">@error('contactos') <span class="error text-danger">{{ $message }}</span> @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="email"></label>
+                        <input wire:model="email" type="text" class="form-control" id="email" placeholder="Email">@error('email') <span class="error text-danger">{{ $message }}</span> @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="quienes_somos"></label>
+                        <input wire:model="quienes_somos" type="text" class="form-control" id="quienes_somos" placeholder="Quienes Somos">@error('quienes_somos') <span class="error text-danger">{{ $message }}</span> @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="Cultura_Org"></label>
+                        <input wire:model="Cultura_Org" type="text" class="form-control" id="Cultura_Org" placeholder="Cultura Org">@error('Cultura_Org') <span class="error text-danger">{{ $message }}</span> @enderror
                     </div>
 
                 </form>

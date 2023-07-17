@@ -55,6 +55,7 @@
     .table td {
         padding: 12px 15px;
         text-align: left;
+        font-size: 10px;
         border-bottom: 1px solid #ddd;
     }
 

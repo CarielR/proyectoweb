@@ -130,7 +130,7 @@
         </li>
 
         <li class="list__inside">
-            <a href="{{ route('generar-pdfcursos') }}" class="nav__link nav__link--inside">Servicios</a>
+            <a href="{{ route('generar-pdfservicio') }}" class="nav__link nav__link--inside">Servicios</a>
         </li>
     </ul>
 </li>

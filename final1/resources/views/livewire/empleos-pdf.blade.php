@@ -9,13 +9,13 @@
     }
 
     .container {
-        max-width: 800px;
         margin: 0 auto;
         padding: 20px;
         background-color: #FFFFFF;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%; /* Ajusta el ancho al 100% */
+        overflow-x: auto; /* Agrega scroll horizontal si es necesario */
     }
-
     .report-header {
         text-align: center;
         margin-bottom: 20px;
@@ -33,10 +33,8 @@
         margin: 0;
     }
 
-    .logo {
-        font-family: Arial, sans-serif;
+    .report-header .logo {
         font-size: 40px;
-        font-weight: bold;
         color: #663399;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -50,35 +48,74 @@
         max-width: 100%;
         overflow-x: auto;
     }
-
     .table {
         width: 100%;
         border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        margin-bottom: 10px;
     }
 
-    .table th,
+    .table th{
+
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        font-size: 9px; /* Ajusta el tamaño de fuente */
+    }
+
     .table td {
-        padding: 12px 15px;
-        text-align: left;
-        border-bottom: 1px solid #EEEEEE;
-        word-wrap: break-word;
+        padding-bottom: 3px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        font-size: 6px; /* Ajusta el tamaño de fuente */
     }
 
-    .table th {
+    .table thead th {
         background-color: #663399;
         color: #FFFFFF;
         font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
-    .table td {
-        background-color: #FFFFFF;
-        color: #333333;
+    .table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f1f1f1;
     }
 
     .report-footer {
         text-align: center;
         margin-top: 20px;
         color: #999999;
+    }
+
+    /* Estilo para el PDF */
+    @media print {
+        body {
+            width: 100%; /* Ajusta el ancho al 100% para visualización horizontal */
+            transform: rotate(90deg); /* Gira el contenido para visualización horizontal */
+        }
+
+        .container {
+            margin: 0;
+            padding: 0;
+        }
+
+        .table {
+            font-size: 10px; /* Ajusta el tamaño de fuente para visualización horizontal */
+        }
+    }
+
+    .pdf-table {
+        table-layout: fixed;
+    }
+
+    .pdf-table th,
+    .pdf-table td {
+        word-wrap: break-word;
+        white-space: normal;
     }
 </style>
 <div class="container">
@@ -89,7 +126,7 @@
     </div>
 
     <div class="table-container">
-        <table class="table">
+        <table class="table pdf-table">
             <thead>
                 <tr>
                     <th>ID</th>

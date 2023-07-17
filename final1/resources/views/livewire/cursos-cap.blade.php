@@ -1,6 +1,7 @@
 @php
-    $servicios = DB::table('servicios')->get();
+    $cursosCaps = DB::table('cursoscaps')->get();
 @endphp
+
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -117,37 +118,50 @@
         white-space: normal;
     }
 </style>
+
 <div class="container">
     <div class="report-header">
-        <h2>Reporte de Servicios</h2>
-        <h1 class="logo">Analytika Women</h1>
+        <h2>Reporte de Cursos/Caps</h2>
         <p>Fecha del reporte: {{ date('Y-m-d') }}</p>
     </div>
 
     <div class="table-container">
-    <table class="table pdf-table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Cliente ID</th>
-                <th>Nombre de Servicio</th>
-                <th>Descripción de Servicio</th>
-                <th>Precio de Servicio</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($servicios as $servicio)
-                <tr>
-                    <td>{{ $servicio->id }}</td>
-                    <td>{{ $servicio->cliente_id }}</td>
-                    <td>{{ $servicio->nombre_serv }}</td>
-                    <td>{{ $servicio->descripcion_serv }}</td>
-                    <td>{{ $servicio->precio_serv }}</td>
-                </tr>
-            @endforeach
-        </tbody>
-    </table>
+        <div class="table-container">
+            <table class="table pdf-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Cliente ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Publicación</th>
+                        <th>Edad Mínima</th>
+                        <th>Edad Máxima</th>
+                        <th>Enlace</th>
+                        <th>Cupos</th>
+                        <th>Costo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($cursosCaps as $cursoCaps)
+                        <tr>
+                            <td>{{ $cursoCaps->id }}</td>
+                            <td>{{ $cursoCaps->cliente_id }}</td>
+                            <td>{{ $cursoCaps->nombre_cursoscaps }}</td>
+                            <td>{{ $cursoCaps->descipcion_cursoscaps }}</td>
+                            <td>{{ $cursoCaps->publicacion_cursoscaps }}</td>
+                            <td>{{ $cursoCaps->edadmin_cursoscaps }}</td>
+                            <td>{{ $cursoCaps->edadmax_cursoscaps }}</td>
+                            <td><a href="{{ $cursoCaps->link_cursoscaps }}"></a>{{ $cursoCaps->link_cursoscaps }}</td>
+                            <td>{{ $cursoCaps->cupos_cursoscaps }}</td>
+                            <td>{{ $cursoCaps->costo_cursoscaps }}</td>
+
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
     </div>
+
     <div class="report-footer">
         <p>Este es el pie de página del reporte.</p>
         <p>Página generada el: {{ date('Y-m-d H:i:s') }}</p>

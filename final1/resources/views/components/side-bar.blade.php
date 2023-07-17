@@ -80,9 +80,9 @@
       <br>
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-      <ul class="menu-horizontal">	
-        
-      
+      <ul class="menu-horizontal">
+
+
       <ul class="list">
 
 
@@ -94,12 +94,12 @@
 
     </div>
 
-    <ul class="list__show">    
-    <li><a href="{{ url('/servicios') }}" ><i class=""></i> Servicios</a></li>  
-    <li><a href="{{ url('/eventos') }}" ><i class=""></i> Eventos</a></li>     
-    <li><a href="{{ url('/empleos') }}" ><i class=""></i> Empleos</a></li>       
+    <ul class="list__show">
+    <li><a href="{{ url('/servicios') }}" ><i class=""></i> Servicios</a></li>
+    <li><a href="{{ url('/eventos') }}" ><i class=""></i> Eventos</a></li>
+    <li><a href="{{ url('/empleos') }}" ><i class=""></i> Empleos</a></li>
     <li><a href="{{ url('/generos') }}" ><i class=""></i> Generos</a> </li>
-    <li><a href="{{ url('/clientes') }}" ><i class=""></i> Clientes</a></li>   
+    <li><a href="{{ url('/clientes') }}" ><i class=""></i> Clientes</a></li>
     </ul>
 
 </li>
@@ -114,29 +114,29 @@
 
     <ul class="list__show">
         <li class="list__inside">
-            <a href="#" class="nav__link nav__link--inside">REPORT</a>
+            <a href="{{ route('generar-pdf') }}" class="nav__link nav__link--inside">Clientes</a>
         </li>
 
         <li class="list__inside">
-            <a href="#" class="nav__link nav__link--inside">REPORT</a>
+            <a href="{{ route('generar-pdfempleo') }}" class="nav__link nav__link--inside">Empleos</a>
         </li>
 
         <li class="list__inside">
-            <a href="#" class="nav__link nav__link--inside">REPORT</a>
+            <a href="{{ route('generar-pdfcursos') }}" class="nav__link nav__link--inside">Cursos</a>
         </li>
 
         <li class="list__inside">
-            <a href="#" class="nav__link nav__link--inside">REPORT</a>
+            <a href="{{ route('generar-pdfevento') }}" class="nav__link nav__link--inside">Eventos</a>
         </li>
 
         <li class="list__inside">
-            <a href="#" class="nav__link nav__link--inside">REPORT</a>
+            <a href="{{ route('generar-pdfcursos') }}" class="nav__link nav__link--inside">Servicios</a>
         </li>
     </ul>
 </li>
 
     <!-- /.sidebar -->
-  </aside> 
+  </aside>
   @livewireScripts
     <script type="module">
         const addModal = new bootstrap.Modal('#createDataModal');

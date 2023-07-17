@@ -16,6 +16,7 @@ class SacarDatos extends Model
     {
         $vision = SacarDatos::pluck('vision')->toArray();
         $mision = SacarDatos::pluck('mision')->toArray();
+
         // Realiza las operaciones que necesites con el campo obtenido
         return view('welcome', compact('vision','mision'));
     }

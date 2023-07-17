@@ -130,7 +130,7 @@
   <section class="centralimg" id="Home">
     <img src="img/central.png" alt="">
     <div class="text-containerC">
-      <p class="typing-effect" style="color: aliceblue;">Transformamos datos en información para la toma de
+      <p class="typing-effect" style="color: aliceblue; font-size: 30px;">Transformamos datos en información para la toma de
         desiciones.</p>
         <br>
     </div>
@@ -144,9 +144,12 @@
         <div class="col-md-12">
           <h3 class="section-title"><img src="img/quienessomos.png" alt="" width="50px" style="margin: 10px;"><span style="color: rgba(255, 9, 222, 0.863);">¿</span> Quiénes somos <span style="color: rgba(255, 9, 222, 0.863);">?</span></h3>
           <div class="section-title-divider"></div>
-          <p class="section-description" style="font-size: 20px;">Somos una empresa conformada por un grupo multidisciplinario de mujeres profesionales de diferentes provincias del país, con una trayectoria importante de trabajo y experiencias en empresas públicas y privadas; tenemos un recorrido amplio de trabajo social
-            con grupo de atención prioritaria.</p>
-            <p class="section-description" style="font-size: 20px;">Somos multifacéticas y creemos que la mujer está preparada para hacer que las cosas sucedan.</p>
+          @foreach($quienes_s as $quienes_somos)
+
+          <p class="section-description" style="font-size: 20px;">{{$quienes_somos}}</p>
+
+          @endforeach
+
         </div>
       </div>
       <br><br><br><br><br><br>
@@ -233,13 +236,10 @@
             <h3 class="section-title">Cultura Organizacional</h3>
             <div class="section-title-divider"></div>
             <div class="imcl">
-            <p style="font-size: 30px; color: rgb(0, 0, 0);">Nuestra empresa promueve la cultura de
-              la integridad personal, para proponer
-              las mejores alternativas frente a las
-              necesidades o requerimientos
-              solicitados; para lo cual nos apoyamos
-              de un equipo multidisciplinario de
-              profesionales con equidad de género.</p>
+                @foreach($cult_org as $cult_org)
+            <p style="font-size: 30px; color: rgb(0, 0, 0);">{{$cult_org}}</p>
+
+            @endforeach
           </div>
           <img src="img/stud.jpg" alt="" class="resized-image">
           </div>
@@ -368,11 +368,15 @@
           <div class="member">
             <div class="left-content">
               <h4 style="font-size: 20px;">Teléfonos</h4>
-              <span style="font-size: 20px;">0999785416</span>
-              <span style="font-size: 20px;">0990902380</span>
+                @foreach($contactos as $contactos)
+                <span style="font-size: 20px;">{{$contactos}}</span>
+                @endforeach
+
               <br><br>
               <h4 style="font-size: 20px;">Email</h4>
-              <span style="font-size: 20px;">analytikawomen@gmail.com</span>
+              @foreach($email as $email)
+                <span style="font-size: 20px;">{{$email}}</span>
+                @endforeach
             </div>
             <div class="right-content">
               <img src="img/contact.png" alt="Imagen de ejemplo">

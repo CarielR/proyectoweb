@@ -1,5 +1,8 @@
 @php
-    $resultados = DB::table('clientes')->get();
+$resultados = DB::table('clientes')
+                   ->join('generos', 'clientes.genero_id', '=', 'generos.id')
+                   ->select('clientes.id', 'generos.Nombre_gen', 'clientes.nombre_cli', 'clientes.fecha_nac_cli', 'clientes.telefono1_cli', 'clientes.telefono2_cli', 'clientes.email_cli', 'clientes.titulo_cli', 'clientes.rol_cli', 'clientes.experiencia_cli')
+                   ->get();
 @endphp
 
 <style>
@@ -146,7 +149,7 @@
                 @foreach ($resultados as $resultado)
                     <tr>
                         <td>{{ $resultado->id }}</td>
-                        <td>{{ $resultado->genero_id }}</td>
+                        <td>{{ $resultado->Nombre_gen }}</td>
                         <td>{{ $resultado->nombre_cli }}</td>
                         <td>{{ $resultado->fecha_nac_cli }}</td>
                         <td>{{ $resultado->telefono1_cli }}</td>

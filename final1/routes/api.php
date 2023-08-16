@@ -17,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/endpoint', 'ApiCursos@metodo');
+Route::post('/endpoint', 'ApiCursos@metodo');
+Route::get('/servicio', 'ApiServicios@metodo');
+Route::post('/servicio', 'ApiServicios@metodo');
+Route::get('/evento', 'ApiEventos@metodo');
+Route::post('/evento', 'ApiEventos@metodo');
+Route::get('/empleo', 'ApiEmpleoss@metodo');
+Route::post('/empleo', 'ApiEmpleos@metodo');
+Route::get('/genero', 'ApiGeneros@metodo');
+Route::post('/genero', 'ApiGeneros@metodo');

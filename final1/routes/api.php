@@ -23,3 +23,5 @@ Route::get('/servicio', 'ApiServicios@metodo');
 Route::post('/servicio', 'ApiServicios@metodo');
 Route::get('/evento', 'ApiEventos@metodo');
 Route::post('/evento', 'ApiEventos@metodo');
+Route::get('/empleo', 'ApiEventos@metodo');
+Route::post('/empleo', 'ApiEventos@metodo');

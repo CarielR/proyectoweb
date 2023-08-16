@@ -7,7 +7,7 @@ class ApiEmpleos extends Controller
     public function metodo()
     {
         $client = new Client();
-        $response = $client->get('https://api.example.com/evento', [
+        $response = $client->get('https://api.example.com/empleo', [
             'headers' => [
                 'Authorization' => 'Bearer ' . env('API_TOKEN'),
                 // Otras cabeceras que pueda requerir la API

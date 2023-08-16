@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/endpoint', 'ApiCursos@metodo');
+Route::post('/endpoint', 'ApiCursos@metodo');
+Route::get('/servicio', 'ApiServicios@metodo');
+Route::post('/servicio', 'ApiServicios@metodo');
